@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhu Sai Kanteti - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            color: white;
+            font-family: Arial;
+            overflow-x: hidden;
+        }
+
+        #stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            animation: twinkle 1.5s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        header {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="stars"></div>
+
+    <header>
+        <h1>Madhu Sai Kanteti</h1>  
+       <nav>
+            <a href="#about">About</a> | 
+            <a href="#certifications">Certifications</a> | 
+            <a href="#projects">Projects</a> | 
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Madhu Kanteti👋! I'm an aspiring <strong>Data Analyst</strong> I am a data-driven problem solver passionate about transforming raw data into meaningful insights. With expertise in Python, data visualization, and dashboard creation, I specialize in trend analysis, process optimization, and data-backed decision-making. <strong>My skills include data cleaning, EDA, statistical modeling, and visualization using Pandas, NumPy, Matplotlib, Seaborn, Power BI, and Tableau</strong>I continuously learn and adapt to new technologies to enhance my analytical capabilities.</p>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Data Analytics and Visualization</h3>
+                <p>Accenture</p>
+            </div>
+            <div class="project-card">
+                <h3>Linux System Administration</h3>
+                <p>Redhat</p>
+            </div>
+            <div class="project-card">
+                <h3>Data Visualisation</h3>
+                <p>TATA</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3> E-Commerce Sales Dashboard</h3>
+                <p>• Developed an interactive dashboard to analyze customer orders, sales trends, and product performance across multiple platforms</p> 
+                <P>• Performed data cleaning and analysis on key metrics such as revenue, order status, customer demographics, and regional sales distribution.</P>
+                <p>•Implemented visualizations using Ms Excelto track business insights, helping stakeholders optimize sales strategies</p>
+            </div>
+            <div class="project-card">
+                <h3>Flipkart Mobile Sales Analysis Dashboard </h3>
+                <p>• Data Cleaning & Preprocessing: Processed and refined raw sales data using Power BI to ensure accuracy, consistency, 
+                    and completeness for in-depth analysis</p> 
+                <p>• Data Analysis & Insights: Conducted exploratory data analysis (EDA) to uncover key trends in mobile sales, including 
+                    brand performance, pricing strategies, and product quality distribution.</p> 
+                <p>• Data Visualization & Dashboard Creation: Designed an interactive Power BI dashboard to visualize insights on total 
+                    products, mobile segments, price ranges, and sales performance, facilitating data-driven decision-making.</p>
+            </div>
+            <div class="project-card">
+                <h3>Myntra Product Sales Analysis | Data Analytics & Business Intelligence </h3>
+                <p>• Performed data analysis on Myntra's shoe sales using Power BI, identifying key trends in product ratings, discount 
+                    strategies, and brand performance.</p> 
+                <p>• Generated insights on pricing strategies and customer preferences, highlighting sales distribution across different 
+                    discount sectors and product category</p> 
+                <P>• Compiled a comprehensive report on sales trends, showcasing expertise in data visualization, business intelligence, 
+                    and market analysis. </p>     
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message" rows="5"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links" style="margin-top: 20px;">
+            <a href="https://www.linkedin.com/in/madhu-sai-30a76426b" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Madhukanteti" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:madhusai8857@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Generate stars
+        const stars = document.getElementById('stars');
+        for(let i = 0; i < 300; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 2 + 's';
+            stars.appendChild(star);
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
